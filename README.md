@@ -6,13 +6,16 @@ A WCS1800 is an analog Hall effect sensor, that deliver a measure by means of vo
 
 ## Attributes
 
-* **analogPin:** This value store the current voltage signal that returns the WCS1800.
+* **analogPin:** Arduino Analog Pin where the WCS1800 is connected.
 * **sensitivity:** This value store the sensitivity expressed in mV/A of the WCS1800.
-* **zero:** This value store the returned voltage by the WCS1800 when the current is aproximately 0.
+* **zeroRead:** Stores the value read by Arduino when the current is 0A, set between 0 and 1024.
+* **zero:** This value is the Vout when the current is 0A, (Vcc/2).
+* **freq:** Line power frequency, normally 60Hz.
 
 ## Methods
 
-* **WCS1800:** Constructor class, takes the value of the analogPin as parameter.
+* **WCS1800:** Constructor class, takes the value of the analogPin, sensitivity, zero and frequency as parameters.
+* **Calibrate:** Sets the value of zeroRead, calibrates the sensor read when current is 0A.
 * **getVout:** Gets the voltage from 0 to 5 v, where 0 v translates 0 A and 5 v translates 35 A 
-* **getDC:** Get the DC current perceived thanks to the hall effect inside the WCS1800.
-* **getAC:** Get the AC current approximation based on the DC current.
+* **getDC:** Gets the DC current perceived thanks to the hall effect inside the WCS1800.
+* **getAC:** Gets the AC current approximation.
