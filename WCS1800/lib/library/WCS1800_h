@@ -1,0 +1,19 @@
+#ifndef wcs1800_h
+#define wcs1800_h
+
+#include <Arduino.h>
+
+class WCS1800{
+public:
+  WCS1800(uint8_t pin, uint8_t V_A, uint8_t Vzero); //uint8_t pin del arduino, entrada analoga
+  float getVout();
+  float getDC(float Vo);
+  float getAC(float Vo);
+
+private:
+  uint8_t analogPin;
+  uint8_t sensitivity;
+  uint8_t zero;
+};
+
+#endif
