@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <WCS1800.h>
 
-WCS1800 currentSensor(0,0.06,2.5,60);
+WCS1800 currentSensor(0,0.066,2.5,60);
 
 void setup()
 {
