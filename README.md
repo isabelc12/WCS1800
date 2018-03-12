@@ -1,6 +1,6 @@
 # WCS1800
 
-A WCS1800 is an analog Hall effect sensor, that deliver a measure by means of voltage. 
+A WCS1800 is an analog Hall effect sensor, that delivers a measure by means of voltage. 
 
 ![wcs 1800 specifications](https://user-images.githubusercontent.com/36057481/37062708-41545b76-2165-11e8-9dcb-40e44ae11cf3.JPG)
 
